@@ -17,40 +17,40 @@ function onEachFeature(feature, layer) {
 
 L.geoJson(countries, {
 filter: function (feature, layer) {
-if (feature.properties) {
-for (c in data.countries) {
-if (data.countries.hasOwnProperty(c)) {
-if (data.countries[c].name === feature.properties.name) {
-feature.properties.hits = data.countries[c].hits;
-}
-}
-}
-}
-return true;
+    if (feature.properties) {
+	for (c in data.countries) {
+	    if (data.countries.hasOwnProperty(c)) {
+		if (data.countries[c].name === feature.properties.name) {
+		    feature.properties.hits = data.countries[c].hits;
+		}
+	    }
+	}
+    }
+    return true;
 },
-style: function (feature) {
-var style;
-if (feature.properties.hits) {
-style = {
-weight: 2,
-opacity: 1,
-color: 'white',
-dashArray: '3',
-fillOpacity: 0.3,
-fillColor: '#ff0000'
-};
-} else {
-style = {
-weight: 2,
-opacity: 1,
-color: 'white',
-dashArray: '3',
-fillOpacity: 0.3,
-fillColor: '#666'
-};
-}
+    style: function (feature) {
+	var style;
+	if (feature.properties.hits) {
+	    style = {
+		weight: 2,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.3,
+		fillColor: '#ff0000'
+	    };
+	} else {
+	    style = {
+		weight: 2,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.3,
+		fillColor: '#666'
+	    };
+	}
 
-return style;
-},
-onEachFeature: onEachFeature
+	return style;
+    },
+    onEachFeature: onEachFeature
 }).addTo(map);

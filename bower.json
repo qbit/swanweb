@@ -1,0 +1,27 @@
+{
+  "name": "swanweb",
+  "authors": [
+    "Aaron Bieber <aaron@bolddaemon.com>"
+  ],
+  "description": "Web UI for LogSwan output",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "logswan",
+    "logs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "leaflet": "~0.7.7"
+  }
+}

@@ -10,7 +10,7 @@
     "logswan",
     "logs"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "homepage": "",
   "private": true,
   "ignore": [
